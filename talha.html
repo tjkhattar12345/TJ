@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Dear Sundas My Love</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fdeff2, #f9c5d1);
+    color: #333;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Hero */
+.hero {
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #b83260;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Typing Animation */
+.typing {
+    font-size: 2rem;
+    color: #b83260;
+    font-weight: bold;
+    margin-top: 20px;
+    min-height: 40px;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: #b83260;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+.dua {
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Image */
+.memory-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Slideshow */
+.slideshow-container {
+    max-width: 320px;
+    margin: 20px auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Hearts */
+.hearts {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.heart {
+    position: absolute;
+    bottom: -20px;
+    width: 20px;
+    height: 20px;
+    background: rgba(184,50,96,0.7);
+    transform: rotate(45deg);
+    animation: floatUp 8s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(184,50,96,0.7);
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+}
+
+.heart::after {
+    left: -10px;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Footer */
+footer {
+    margin: 40px 0;
+    font-size: 0.9rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hearts -->
+<div class="hearts">
+    <div class="heart" style="left:10%"></div>
+    <div class="heart" style="left:30%"></div>
+    <div class="heart" style="left:50%"></div>
+    <div class="heart" style="left:70%"></div>
+    <div class="heart" style="left:90%"></div>
+</div>
+
+<div class="container">
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Happy Birthday My Love ❤️</h1>
+    <p>Allah’s most beautiful blessing in my life</p>
+    <div class="typing" id="typing"></div>
+</section>
+
+<!-- Love Message -->
+<section class="card">
+<h2>For You, My Heart</h2>
+<p>
+You are my peace, my strength, and my greatest blessing.
+Loving you is the most beautiful journey Allah has written for me.
+</p>
+</section>
+
+<!-- Slideshow -->
+<section class="card">
+<h2>Your Sweet Memories 💕</h2>
+
+<div class="slideshow-container">
+    <div class="slide fade"><img src="S-2.jpeg"></div>
+    <div class="slide fade"><img src="S-1.jpeg"></div>
+    <div class="slide fade"><img src="S-4.jpeg"></div>
+    <div class="slide fade"><img src="S-3.jpeg"></div>
+    
+</div>
+
+<p class="dua">
+Ya Allah, keep our hearts united with love and mercy.
+</p>
+</section>
+
+<!-- Image Card -->
+<section class="card">
+<h2>A Sweet Little Memory 🍫</h2>
+<p>
+Just like this chocolate, you add sweetness to my life.
+</p>
+<img src="chocolate (1).jpeg" class="memory-img">
+</section>
+
+<!-- Islamic -->
+<section class="card">
+<h2>A Dua From My Heart 🤍</h2>
+<p class="dua">
+Ya Allah, grant her happiness, health, barakah,
+and a place beside me in Jannah.
+</p>
+</section>
+
+<!-- Ayah -->
+<section class="card">
+<h2>From the Qur’an 🌙</h2>
+<p class="dua">
+“And among His signs is that He created for you spouses
+that you may find tranquility in them.”
+<br><strong>(Surah Ar-Rum 30:21)</strong>
+</p>
+</section>
+
+<footer>
+Forever Yours,<br>
+<strong>Talha ❤️</strong>
+</footer>
+
+</div>
+
+<!-- Nasheed -->
+<audio id="nasheed" autoplay loop>
+    <source src="arabic-islamic-islam-music-360770.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Music Button -->
+<button onclick="toggleAudio()" style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#b83260;
+color:white;
+border:none;
+border-radius:30px;
+padding:10px 15px;
+z-index:1000;">
+🎵 
+</button>
+
+<script>
+/* Typing Animation */
+const text = "Happy Birthday To You My Special One ❤️";
+let i = 0;
+function typeText() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeText, 150);
+    }
+}
+typeText();
+
+/* Slideshow */
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1;
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 3000);
+}
+
+/* Audio */
+const audio = document.getElementById("nasheed");
+function toggleAudio() {
+    audio.paused ? audio.play() : audio.pause();
+}
+</script>
+
+</body>
+</html>
